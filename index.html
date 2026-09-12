@@ -114,7 +114,6 @@
     /* =========================
        HEADER
     ========================= */
-
     header {
       position: absolute;
       inset: 0 0 auto;
@@ -174,7 +173,6 @@
     /* =========================
        HERO
     ========================= */
-
     .hero {
       position: relative;
       min-height: 850px;
@@ -186,6 +184,7 @@
         radial-gradient(circle at 15% 70%, rgba(31,107,90,.18), transparent 30%),
         var(--navy);
       color: var(--white);
+      padding: 120px 0 80px;
     }
 
     .hero::before {
@@ -292,7 +291,6 @@
     }
 
     /* Gift Card Hero */
-
     .hero-visual {
       position: relative;
       min-height: 550px;
@@ -485,7 +483,6 @@
     /* =========================
        TRUST BAR
     ========================= */
-
     .trust-bar {
       background: white;
       border-bottom: 1px solid var(--border);
@@ -524,7 +521,6 @@
     /* =========================
        GIFT SELECTOR
     ========================= */
-
     .gift-section {
       padding: 125px 0;
       background: var(--cream);
@@ -651,7 +647,6 @@
     /* =========================
        WHY SECTION
     ========================= */
-
     .why-section {
       padding: 125px 0;
       background: white;
@@ -680,4 +675,236 @@
     }
 
     .why-card:hover {
-      transform: translateY(-5
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .why-card h4 {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .why-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+    @media (max-width: 992px) {
+      .hero-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+      .gift-options {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .nav-links {
+        display: none;
+      }
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .trust-grid,
+      .gift-options,
+      .why-cards {
+        grid-template-columns: 1fr;
+      }
+      .trust-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+        padding: 15px 0;
+      }
+      .trust-item:last-child {
+        border-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="logo">Finora<span>.</span></a>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#gifts">Gift Cards</a>
+          <a href="#why">Why Finora</a>
+          <a href="#contact" class="nav-btn">Get Started</a>
+        </div>
+        <button class="menu-btn" aria-label="Open Menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Exclusive Financial Gifting</span>
+          <h1>Give The Gift Of <span>Confidence</span></h1>
+          <p class="hero-subtitle">Premium certified accounting advisory services packaged as an elegant digital gift card. Empower someone's business or future today.</p>
+          <div class="hero-actions">
+            <a href="#gifts" class="btn btn-primary">Choose A Gift Card</a>
+            <a href="#why" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="glow"></div>
+          <div class="gift-card">
+            <div class="card-brand">FINORA <span>CPA</span></div>
+            <div class="card-chip"></div>
+            <div class="card-label">Advisory Credit</div>
+            <div class="card-price">$500</div>
+            <div class="card-bottom">Premium Client</div>
+          </div>
+          <div class="mini-phone">
+            <div class="phone-screen">
+              <div class="phone-notch"></div>
+              <div class="phone-logo">Finora App</div>
+              <div class="phone-line"></div>
+              <div class="phone-line small"></div>
+              <div class="phone-box">
+                <small>Card Balance</small>
+                <strong>$500.00</strong>
+                <div class="phone-btn"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-number">99.8%</div>
+          <div class="trust-label">Client Satisfaction</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">15+ Yrs</div>
+          <div class="trust-label">CPA Experience</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">$25M+</div>
+          <div class="trust-label">Taxes Saved</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">Instant</div>
+          <div class="trust-label">Digital Delivery</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIFT SELECTOR -->
+  <section class="gift-section" id="gifts">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Select A Tier</span>
+        <h2 class="section-title">Tailored For Every <span>Milestone</span></h2>
+        <p class="section-copy">Choose the appropriate advisory package suited for personal tax strategy or comprehensive business setup.</p>
+      </div>
+
+      <div class="gift-options">
+        <div class="gift-option">
+          <div class="gift-amount">$250</div>
+          <h3>Starter</h3>
+          <p>Ideal for personal tax review and freelance optimization.</p>
+          <ul class="features">
+            <li>1-on-1 Consultation</li>
+            <li>Tax Filing Checklist</li>
+            <li>Digital Certificate</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Select Tier</a>
+        </div>
+
+        <div class="gift-option featured">
+          <span class="popular">Popular</span>
+          <div class="gift-amount">$500</div>
+          <h3>Executive</h3>
+          <p>Comprehensive planning for business owners and startups.</p>
+          <ul class="features">
+            <li>Quarterly Tax Review</li>
+            <li>Deductions Roadmap</li>
+            <li>Priority CPA Access</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Select Tier</a>
+        </div>
+
+        <div class="gift-option">
+          <div class="gift-amount">$1,000</div>
+          <h3>Corporate</h3>
+          <p>Complete entity structuring and corporate audit defense.</p>
+          <ul class="features">
+            <li>Entity Restructuring</li>
+            <li>Year-Round Advisory</li>
+            <li>Custom Tax Shield</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Select Tier</a>
+        </div>
+
+        <div class="gift-option">
+          <div class="gift-amount">Custom</div>
+          <h3>Bespoke</h3>
+          <p>Tailored financial solutions for estates and enterprises.</p>
+          <ul class="features">
+            <li>Dedicated Partner</li>
+            <li>Multi-Entity Audit</li>
+            <li>Custom Retainer</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY SECTION -->
+  <section class="why-section" id="why">
+    <div class="container">
+      <div class="why-grid">
+        <div>
+          <span class="eyebrow">Why Choose Finora</span>
+          <h2 class="section-title">Beyond Routine <span>Accounting</span></h2>
+          <p class="section-copy">We transform complicated tax laws into direct strategic leverage. Give a gift that generates measurable returns.</p>
+        </div>
+
+        <div class="why-cards">
+          <div class="why-card">
+            <h4>Licensed CPAs</h4>
+            <p>Every credit is redeemed with senior board-certified CPAs and wealth tacticians.</p>
+          </div>
+          <div class="why-card">
+            <h4>Zero Expiry</h4>
+            <p>Our gift cards retain their real monetary value forever without penalty fees.</p>
+          </div>
+          <div class="why-card">
+            <h4>Seamless App</h4>
+            <p>Recipients can claim credits and track advisory sessions right from their smartphone.</p>
+          </div>
+          <div class="why-card">
+            <h4>Tax Deductible</h4>
+            <p>Gifts to employees, contractors, or partners often qualify for deductible write-offs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
