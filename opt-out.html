@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opt-Out / Unsubscribe — RewardPulse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #090e17; color: #f8fafc; line-height: 1.8; margin: 0; padding: 40px 20px; }
+    .wrapper { max-width: 600px; margin: 0 auto; background: #0f172a; padding: 40px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); text-align: center; }
+    h1 { color: #38bdf8; font-size: 28px; margin-bottom: 12px; }
+    p { color: #94a3b8; font-size: 15px; margin-bottom: 25px; }
+    input[type="email"] { width: 100%; padding: 14px; background: #141f36; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #fff; font-size: 15px; box-sizing: border-box; margin-bottom: 18px; }
+    .btn-submit { width: 100%; padding: 14px; background: #ef4444; color: #fff; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; font-size: 15px; }
+    .btn-submit:hover { background: #dc2626; }
+    .btn-back { display: inline-block; margin-top: 25px; color: #94a3b8; text-decoration: none; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Opt-Out & Unsubscribe</h1>
+    <p>If you no longer wish to receive promotional notifications or reward opportunity alerts, enter your registered email address below.</p>
+
+    <form onsubmit="event.preventDefault(); alert('Your email has been successfully queued for removal from all lists.');">
+      <input type="email" placeholder="Enter your email address..." required>
+      <button type="submit" class="btn-submit">Remove My Data</button>
+    </form>
+
+    <p style="font-size: 12px; margin-top: 20px; color: #64748b;">
+      Please allow up to 48 hours for your email to be purged from all automated notification databases.
+    </p>
+
+    <a href="index.html" class="btn-back">&larr; Return to Home</a>
+  </div>
+</body>
+</html>
