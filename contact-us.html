@@ -3,47 +3,335 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us — RewardPulse</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Contact Support Desk — RewardPulse Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; background: #090e17; color: #f8fafc; line-height: 1.8; margin: 0; padding: 40px 20px; }
-    .wrapper { max-width: 650px; margin: 0 auto; background: #0f172a; padding: 40px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
-    h1 { color: #38bdf8; font-size: 30px; margin-bottom: 10px; }
-    p { color: #94a3b8; font-size: 15px; margin-bottom: 25px; }
-    .field { margin-bottom: 18px; }
-    label { display: block; font-size: 13px; color: #cbd5e1; margin-bottom: 6px; }
-    input, textarea { width: 100%; padding: 12px; background: #141f36; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; font-family: inherit; font-size: 14px; box-sizing: border-box; }
-    textarea { height: 120px; resize: vertical; }
-    .btn-submit { width: 100%; padding: 14px; background: #10b981; color: #fff; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 15px; }
-    .btn-back { display: inline-block; margin-top: 20px; color: #94a3b8; text-decoration: none; font-size: 13px; }
+    :root {
+      --bg-primary: #090e17;
+      --bg-surface: #0f172a;
+      --bg-card: #141f36;
+      --primary: #38bdf8;
+      --accent: #10b981;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-focus: rgba(56, 189, 248, 0.45);
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08), transparent 45%),
+                  radial-gradient(circle at 10% 80%, rgba(16, 185, 129, 0.05), transparent 35%),
+                  var(--bg-primary);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .wrapper {
+      width: min(640px, 100%);
+      background: linear-gradient(160deg, rgba(15, 23, 42, 0.95), rgba(11, 18, 32, 0.95));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 44px;
+      box-shadow: 0 35px 90px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: #cbd5e1;
+      margin-bottom: 7px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px 16px;
+      background: rgba(20, 31, 54, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.12);
+    }
+
+    textarea {
+      height: 115px;
+      resize: vertical;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-top: 10px;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(16, 185, 129, 0.35);
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 24px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--primary);
+    }
+
+    /* ================= MODAL NOTIFICATION ================= */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 11, 20, 0.82);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-card {
+      background: linear-gradient(145deg, #111a2e, #090e18);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 24px;
+      padding: 38px 30px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+      transform: scale(0.92);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: scale(1);
+    }
+
+    .icon-badge {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+      font-size: 30px;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 35px rgba(16, 185, 129, 0.2);
+    }
+
+    .modal-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .modal-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .ticket-box {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px dashed rgba(255, 255, 255, 0.14);
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 12px;
+      color: var(--primary);
+      margin-bottom: 24px;
+      font-family: monospace;
+    }
+
+    .btn-close {
+      width: 100%;
+      padding: 13px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-close:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <h1>Contact Support</h1>
-    <p>Have questions about survey qualification, campaign status, or token redemption? Fill out the inquiry form below.</p>
 
-    <form onsubmit="event.preventDefault(); alert('Thank you. Your message has been routed to our verification support desk.');">
+  <div class="wrapper">
+    <div class="badge">Official Support Channel</div>
+    <h1>Contact Support Desk</h1>
+    <p class="subtitle">Have inquiries about survey qualification, campaign availability, or voucher token status? Submit your request below.</p>
+
+    <form id="contactForm">
       <div class="field">
         <label>Full Name</label>
-        <input type="text" placeholder="John Doe" required>
+        <input type="text" id="name" placeholder="John Doe" required>
       </div>
+
       <div class="field">
-        <label>Email Address</label>
-        <input type="email" placeholder="john@example.com" required>
+        <label>Primary Email Address</label>
+        <input type="email" id="email" placeholder="john@example.com" required>
       </div>
+
       <div class="field">
-        <label>Selected Offer Inquiry</label>
-        <input type="text" placeholder="e.g. Costco $750 or Zelle $750">
+        <label>Campaign / Offer Inquiry</label>
+        <select id="offer">
+          <option value="General Support">General Support / Status Check</option>
+          <option value="Costco $750">Costco Wholesale $750 Perk</option>
+          <option value="Direct Deposit $1000">$1,000 Direct Cash Deposit</option>
+          <option value="Zelle $750">Zelle Express $750 Balance</option>
+          <option value="Target $750">Target Shopping Spree $750</option>
+          <option value="McDonalds $100">McDonald's Dining $100 Credit</option>
+          <option value="eBike $1000">Electric Bike $1,000 Credit</option>
+        </select>
       </div>
+
       <div class="field">
-        <label>Message</label>
-        <textarea placeholder="Describe your question or issue in detail..." required></textarea>
+        <label>Detailed Message</label>
+        <textarea id="message" placeholder="Please provide your questions or claim details..." required></textarea>
       </div>
-      <button type="submit" class="btn-submit">Submit Inquiry</button>
+
+      <button type="submit" class="btn-submit">Submit Support Inquiry</button>
     </form>
 
-    <a href="index.html" class="btn-back">&larr; Return to Home</a>
+    <a href="index.html" class="back-link">&larr; Return to Main Portal</a>
   </div>
+
+  <!-- CUSTOM SUCCESS MODAL -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-card">
+      <div class="icon-badge">&#10003;</div>
+      <h2 class="modal-title">Inquiry Received</h2>
+      <p class="modal-desc">Your message has been logged with our verification desk. A review officer will review your claim within 12–24 business hours.</p>
+      
+      <div class="ticket-box">
+        Reference ID: <span id="ticketId">#RP-84920</span>
+      </div>
+
+      <button type="button" class="btn-close" onclick="closeModal()">Dismiss & Return</button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const modal = document.getElementById('successModal');
+    const ticketIdSpan = document.getElementById('ticketId');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Generate a random dynamic reference ticket
+      const randomTicket = '#RP-' + Math.floor(100000 + Math.random() * 900000);
+      ticketIdSpan.textContent = randomTicket;
+
+      // Show the customized pop-up modal
+      modal.classList.add('active');
+      form.reset();
+    });
+
+    function closeModal() {
+      modal.classList.remove('active');
+    }
+
+    // Close when clicking background outside the card
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+
 </body>
 </html>
