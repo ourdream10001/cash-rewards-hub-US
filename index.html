@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RewardPulse — Verified Consumer Perks & Rewards Portal</title>
-  <meta name="description" content="Share your consumer opinion and unlock verified grocery, fashion, and digital cash rewards." />
+  <meta name="description" content="Share your consumer opinion and unlock verified grocery, dining, fashion, and digital cash rewards." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -351,14 +351,14 @@
       border-color: var(--primary);
     }
 
-    /* 7. OFFERS GRID */
+    /* 7. OFFERS GRID (6 CARDS / 3 COLUMNS) */
     .rewards-section {
       padding: 30px 0 90px;
     }
 
     .rewards-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
 
@@ -733,7 +733,7 @@
         <div class="hero-text">
           <div class="badge">Official Shopper Perks 2026</div>
           <h1 class="section-title">Get Rewarded for Sharing Your <span>Consumer Opinion</span></h1>
-          <p class="section-desc">Select premium grocery shopping allowances, direct wallet transfers, or fashion gift cards. Complete straightforward feedback checklists funded by major brand research panels.</p>
+          <p class="section-desc">Select premium grocery shopping allowances, direct wallet transfers, retail vouchers, or dining credits. Complete straightforward feedback checklists funded by leading brand research panels.</p>
           <div class="hero-cta">
             <a href="#rewards" class="btn btn-primary">Browse Active Allocations</a>
             <a href="#eligibility" class="btn btn-outline">Check Qualifications</a>
@@ -747,19 +747,19 @@
         <div class="hero-visual-card">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
             <span style="font-size: 12px; color: var(--accent); font-weight: 700;">● LIVE VERIFICATION ROUND</span>
-            <span style="font-size: 12px; color: var(--text-muted);">Region: Global Tier-1</span>
+            <span style="font-size: 12px; color: var(--text-muted);">Region: United States</span>
           </div>
           <div style="font-size: 14px; margin-bottom: 15px; color: var(--text-muted);">Current Active Inventory:</div>
           <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; padding: 14px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
-            <span>🛒 $750 Grocery Assistance</span>
+            <span>🛒 $750 Costco Wholesale</span>
             <strong style="color: var(--accent);">Available</strong>
           </div>
           <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; padding: 14px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
-            <span>💸 $1,000 Digital P2P Wallet</span>
+            <span>💸 $1,000 Direct Deposit</span>
             <strong style="color: var(--accent);">Available</strong>
           </div>
           <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; padding: 14px; display: flex; justify-content: space-between; align-items: center;">
-            <span>👗 $750 Seasonal Wardrobe</span>
+            <span>⚡ $750 Zelle Transfer</span>
             <strong style="color: var(--primary);">Filling Fast</strong>
           </div>
         </div>
@@ -786,12 +786,13 @@
   <!-- ================= 4. LIVE ACTIVITY TICKER ================= -->
   <div class="ticker-wrap">
     <div class="ticker-content">
-      <div class="ticker-item">🎉 <strong>Mark R. (Texas)</strong> claimed $750 Grocery Reward (2m ago)</div>
-      <div class="ticker-item">🎉 <strong>David K. (London)</strong> unlocked £500 Wallet Credit (4m ago)</div>
-      <div class="ticker-item">🎉 <strong>Sarah T. (Toronto)</strong> received $750 Fashion Voucher (7m ago)</div>
-      <div class="ticker-item">🎉 <strong>Liam C. (Sydney)</strong> redeemed $1,000 Direct Allowance (9m ago)</div>
-      <div class="ticker-item">🎉 <strong>Mark R. (Texas)</strong> claimed $750 Grocery Reward (2m ago)</div>
-      <div class="ticker-item">🎉 <strong>David K. (London)</strong> unlocked £500 Wallet Credit (4m ago)</div>
+      <div class="ticker-item">🎉 <strong>Mark R. (Texas)</strong> claimed $750 Costco Card (2m ago)</div>
+      <div class="ticker-item">🎉 <strong>David K. (Florida)</strong> unlocked $100 McDonald's Credit (4m ago)</div>
+      <div class="ticker-item">🎉 <strong>Sarah T. (Ohio)</strong> received $750 Target Spree (6m ago)</div>
+      <div class="ticker-item">🎉 <strong>Brandon L. (California)</strong> received $1,000 Cash Deposit (8m ago)</div>
+      <div class="ticker-item">🎉 <strong>Jessica M. (Georgia)</strong> claimed $750 Zelle Balance (11m ago)</div>
+      <div class="ticker-item">🎉 <strong>Chris W. (Arizona)</strong> claimed $1,000 eBike Voucher (14m ago)</div>
+      <div class="ticker-item">🎉 <strong>Mark R. (Texas)</strong> claimed $750 Costco Card (2m ago)</div>
     </div>
   </div>
 
@@ -813,69 +814,93 @@
   <!-- ================= 6. CATEGORY SELECTOR ================= -->
   <section class="filter-section">
     <div class="container">
-      <div class="badge">Region & Category Selection</div>
+      <div class="badge">Active Verified Campaigns</div>
       <h2 class="section-title" style="margin-top: 10px;">Select Your <span>Reward Vertical</span></h2>
       <div class="filter-pills">
-        <button class="pill active">All Available</button>
-        <button class="pill">🇺🇸 United States</button>
-        <button class="pill">🇬🇧 United Kingdom</button>
-        <button class="pill">🇨🇦 Canada</button>
-        <button class="pill">🇦🇺 Australia</button>
+        <button class="pill active">All Categories</button>
+        <button class="pill">🛒 Retail & Wholesale</button>
+        <button class="pill">🍔 Dining & Food</button>
+        <button class="pill">💸 Cash & Instant Pay</button>
+        <button class="pill">🚲 Lifestyle Gear</button>
       </div>
     </div>
   </section>
 
-  <!-- ================= 7. REWARDS GRID ================= -->
+  <!-- ================= 7. REWARDS GRID (YOUR 6 SCREENSHOT OFFERS) ================= -->
   <section class="rewards-section" id="rewards">
     <div class="container">
       <div class="rewards-grid">
 
-        <!-- CARD 1 -->
-        <div class="reward-card">
-          <div class="card-top">
-            <span class="badge">Hot Tier</span>
-            <span class="country-flag">🇺🇸</span>
-          </div>
-          <div class="reward-val">$750</div>
-          <h3>Grocery Assistance</h3>
-          <p>Redeemable toward national food, home essentials, and grocery chains across qualified US zip codes.</p>
-          <a href="YOUR_AFFMINE_TRACKING_LINK_HERE" class="btn btn-primary" target="_blank" rel="noopener">Claim $750 Reward</a>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="reward-card">
-          <div class="card-top">
-            <span class="badge">Direct Credit</span>
-            <span class="country-flag">🇺🇸 / 🇨🇦</span>
-          </div>
-          <div class="reward-val">$1,000</div>
-          <h3>Digital Cash Transfer</h3>
-          <p>Direct electronic transfer to authorized mobile wallet accounts upon survey verification.</p>
-          <a href="YOUR_AFFMINE_TRACKING_LINK_HERE" class="btn btn-primary" target="_blank" rel="noopener">Select Transfer</a>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="reward-card">
-          <div class="card-top">
-            <span class="badge">Apparel</span>
-            <span class="country-flag">🇬🇧 / 🇦🇺</span>
-          </div>
-          <div class="reward-val">£500 / $750</div>
-          <h3>Fashion & Trends Spree</h3>
-          <p>Upgrade your seasonal apparel inventory. Digital claim codes issued via email authentication.</p>
-          <a href="YOUR_AFFMINE_TRACKING_LINK_HERE" class="btn btn-primary" target="_blank" rel="noopener">Claim Voucher</a>
-        </div>
-
-        <!-- CARD 4 -->
+        <!-- CARD 1: COSTCO $750 -->
         <div class="reward-card">
           <div class="card-top">
             <span class="badge">Wholesale</span>
-            <span class="country-flag">🇺🇸 / 🇨🇦</span>
+            <span class="country-flag">🇺🇸</span>
           </div>
           <div class="reward-val">$750</div>
-          <h3>Bulk Store Allowance</h3>
-          <p>Covers household electronic upgrades, pantry storage, and member warehouse orders.</p>
-          <a href="YOUR_AFFMINE_TRACKING_LINK_HERE" class="btn btn-primary" target="_blank" rel="noopener">Start Registration</a>
+          <h3>Costco Wholesale Perk</h3>
+          <p>Redeemable for bulk groceries, household electronics, and warehouse pantry supplies across verified US locations.</p>
+          <a href="YOUR_AFFMINE_COSTCO_LINK" class="btn btn-primary" target="_blank" rel="noopener">Claim $750 Card</a>
+        </div>
+
+        <!-- CARD 2: MCDONALD'S $100 -->
+        <div class="reward-card">
+          <div class="card-top">
+            <span class="badge">Dining</span>
+            <span class="country-flag">🇺🇸</span>
+          </div>
+          <div class="reward-val">$100</div>
+          <h3>McDonald's Dining Credit</h3>
+          <p>Instant mobile dining credit valid for drive-thru, delivery, or counter orders across eligible US locations.</p>
+          <a href="YOUR_AFFMINE_MCDONALDS_LINK" class="btn btn-primary" target="_blank" rel="noopener">Claim $100 Treat</a>
+        </div>
+
+        <!-- CARD 3: TARGET $750 -->
+        <div class="reward-card">
+          <div class="card-top">
+            <span class="badge">Retail Spree</span>
+            <span class="country-flag">🇺🇸</span>
+          </div>
+          <div class="reward-val">$750</div>
+          <h3>Target Shopping Spree</h3>
+          <p>Upgrade everyday home decor, fashion essentials, and electronics with a verified department store allocation.</p>
+          <a href="YOUR_AFFMINE_TARGET_LINK" class="btn btn-primary" target="_blank" rel="noopener">Claim $750 Card</a>
+        </div>
+
+        <!-- CARD 4: $1,000 CASH DEPOSIT -->
+        <div class="reward-card">
+          <div class="card-top">
+            <span class="badge">Direct Transfer</span>
+            <span class="country-flag">🇺🇸</span>
+          </div>
+          <div class="reward-val">$1,000</div>
+          <h3>Direct Cash Deposit</h3>
+          <p>Electronic cash balance routed directly to your verified primary checking or authorized payout account.</p>
+          <a href="YOUR_AFFMINE_CASHLINK" class="btn btn-primary" target="_blank" rel="noopener">Select Deposit</a>
+        </div>
+
+        <!-- CARD 5: ZELLE $750 -->
+        <div class="reward-card">
+          <div class="card-top">
+            <span class="badge">Instant Pay</span>
+            <span class="country-flag">🇺🇸</span>
+          </div>
+          <div class="reward-val">$750</div>
+          <h3>Zelle Express Balance</h3>
+          <p>Zero-fee instant peer-to-peer balance transfer credited to your linked mobile number or email address.</p>
+          <a href="YOUR_AFFMINE_ZELLE_LINK" class="btn btn-primary" target="_blank" rel="noopener">Claim $750 Zelle</a>
+        </div>
+
+        <!-- CARD 6: $1,000 EBIKE -->
+        <div class="reward-card">
+          <div class="card-top">
+            <span class="badge">Eco Mobility</span>
+            <span class="country-flag">🇺🇸</span>
+          </div>
+          <div class="reward-val">$1,000</div>
+          <h3>Electric Bike Credit</h3>
+          <p>Dedicated equipment voucher applicable toward commuter e-bikes, accessories, and urban travel gear.</p>
+          <a href="YOUR_AFFMINE_EBIKE_LINK" class="btn btn-primary" target="_blank" rel="noopener">Claim $1,000 eBike</a>
         </div>
 
       </div>
@@ -894,17 +919,17 @@
         <div class="step-box">
           <div class="step-num">01</div>
           <h3>Choose Your Allocation</h3>
-          <p>Pick the payout balance and brand allocation that matches your regular shopping habits.</p>
+          <p>Pick the payout balance and brand allocation that matches your everyday shopping habits.</p>
         </div>
         <div class="step-box">
           <div class="step-num">02</div>
           <h3>Answer Sponsor Questions</h3>
-          <p>Provide verified consumer opinions on everyday consumer habits and complete partner requirements.</p>
+          <p>Provide verified consumer opinions on everyday consumer habits and complete partner checklist steps.</p>
         </div>
         <div class="step-box">
           <div class="step-num">03</div>
           <h3>Authenticate & Receive</h3>
-          <p>Confirm your inbox link to securely extract your unique digital voucher redemption token.</p>
+          <p>Confirm your inbox email link to securely extract your unique digital voucher redemption token.</p>
         </div>
       </div>
     </div>
@@ -920,13 +945,13 @@
       <div class="criteria-grid">
         <div class="criteria-card">
           <div class="criteria-icon">📍</div>
-          <h4>Tier-1 Geo Resident</h4>
-          <p>Must currently reside in the US, UK, Canada, or Australia.</p>
+          <h4>United States Resident</h4>
+          <p>Must currently reside in eligible US zip codes to qualify for allocation.</p>
         </div>
         <div class="criteria-card">
           <div class="criteria-icon">🔞</div>
-          <h4>Legal Age (18+)</h4>
-          <p>Participants must be of legal adult age to claim balances.</p>
+          <h4>Legal Adult (18+)</h4>
+          <p>Participants must be of legal adult age to claim balances or transfers.</p>
         </div>
         <div class="criteria-card">
           <div class="criteria-icon">✉️</div>
@@ -935,14 +960,14 @@
         </div>
         <div class="criteria-card">
           <div class="criteria-icon">📝</div>
-          <h4>Honest Feedback</h4>
-          <p>Complete survey questionnaires with authentic consumer data.</p>
+          <h4>Authentic Feedback</h4>
+          <p>Complete survey questionnaires with genuine, verifiable responses.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= 10. DIGITAL VOUCHER VERIFICATION PROOF ================= -->
+  <!-- ================= 10. DIGITAL VOUCHER PROOF ================= -->
   <section class="voucher-section">
     <div class="container">
       <div class="voucher-grid">
@@ -971,7 +996,7 @@
     </div>
   </section>
 
-  <!-- ================= 11. SECURITY & COMPLIANCE ================= -->
+  <!-- ================= 11. SECURITY BADGES ================= -->
   <section class="security-section">
     <div class="container">
       <div class="security-grid">
@@ -993,14 +1018,14 @@
           <div class="sec-icon">🛡️</div>
           <div class="sec-text">
             <h4>Anti-Bot Shielding</h4>
-            <p>Automated screening preserves legitimate allocations for genuine regional residents.</p>
+            <p>Automated screening preserves legitimate allocations for genuine US residents.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= 12. VERIFIED REVIEWS ================= -->
+  <!-- ================= 12. TESTIMONIALS ================= -->
   <section class="reviews-section" id="reviews">
     <div class="container">
       <div style="text-align: center;">
@@ -1010,34 +1035,34 @@
 
       <div class="reviews-grid">
         <div class="review-card">
-          <p>"Was pleasantly surprised. Took roughly 7 minutes to answer survey deals, and the confirmation email delivered my grocery card the following afternoon."</p>
+          <p>"Was pleasantly surprised. Took roughly 7 minutes to finish the sponsor questions, and my Costco gift code came through the following morning."</p>
           <div class="reviewer">
             <div class="reviewer-avatar">EH</div>
             <div class="reviewer-info">
               <strong>Emily H.</strong>
-              <span>Orlando, FL — $750 Grocery Claim</span>
+              <span>Orlando, FL — $750 Costco Claim</span>
             </div>
           </div>
         </div>
 
         <div class="review-card">
-          <p>"Clean verification process. No hidden subscription requirements as long as you complete the designated partner checklist steps carefully."</p>
+          <p>"Clean verification process. No subscriptions or hidden fees involved as long as you complete the designated deals accurately."</p>
           <div class="reviewer">
             <div class="reviewer-avatar">JT</div>
             <div class="reviewer-info">
               <strong>James T.</strong>
-              <span>Manchester, UK — £500 Account Credit</span>
+              <span>Austin, TX — $750 Zelle Balance</span>
             </div>
           </div>
         </div>
 
         <div class="review-card">
-          <p>"Easy to navigate from mobile. Knocked out the questions while riding the commuter train and used the voucher during weekend shopping."</p>
+          <p>"Super simple to navigate from my phone. Completed the McDonald's dining promo during my lunch break and used it the same week."</p>
           <div class="reviewer">
             <div class="reviewer-avatar">CL</div>
             <div class="reviewer-info">
               <strong>Chloe L.</strong>
-              <span>Calgary, AB — $750 Fashion Voucher</span>
+              <span>Chicago, IL — $100 McDonald's Credit</span>
             </div>
           </div>
         </div>
@@ -1088,7 +1113,7 @@
         <a href="#">Contact Us</a>
       </div>
       <p class="disclaimer">
-        Disclaimer: RewardPulse is an independent promotional aggregator connecting consumer audiences with independent research panels. Tradenames, trademarks, product names, and registered logos shown on this site (including but not limited to retailers, electronic transfer networks, and department stores) are the property of their respective trademark holders. Mention does not indicate sponsorship, partnership, or direct endorsement of RewardPulse by these entities. Eligibility varies based on regional geographic criteria, user age (18+), and precise completion of third-party sponsor task criteria.
+        Disclaimer: RewardPulse is an independent promotional aggregator connecting consumer audiences with independent research panels. Tradenames, trademarks, product names, and registered logos shown on this site (including but not limited to Costco, Target, McDonald's, and Zelle) are the property of their respective trademark holders. Mention does not indicate sponsorship, partnership, or direct endorsement of RewardPulse by these entities. Eligibility varies based on regional geographic criteria, user age (18+), and precise completion of third-party sponsor task criteria.
       </p>
       <p>&copy; 2026 RewardPulse Portal. All Rights Reserved.</p>
     </div>
